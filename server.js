@@ -11,7 +11,10 @@ const cors = require("cors");
 const app = express();
 
 // ── Middleware ────────────────────────────────
-app.use(cors({ origin: "*", credentials: false }));
+app.use(cors({ 
+  origin: 'https://shopgreen-frontend.vercel.app', 
+  credentials: true 
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
